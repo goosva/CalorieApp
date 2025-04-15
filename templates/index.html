@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{%  block head  %} 
+
+{%  endblock  %}
+
+{%  block body  %}
+<!--Background Image for Login Page-->
+<style> 
+    body{
+        background-image: url("{{url_for('static' , filename='images/login_background.jpg')}}");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+
+<!--Square in the center for logging in-->
+<div class="center-login-square">
+    <form action="{{url_for('login')}}" method="POST">
+        
+        <textarea name="login_input" style="margin: auto; margin-top: 30%;" placeholder="Enter your email"></textarea>
+        <br>
+        <textarea name="password_input" style="margin: auto; margin-top: 30%;" placeholder="Enter your password"></textarea>
+
+        <button type="submit">Submit</button>
+        
+        
+    </form>
+</div>
+
+<!--Gets the users email and password-->
+
+
+
+{%  endblock  %}
