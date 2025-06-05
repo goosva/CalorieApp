@@ -9,8 +9,16 @@
 
 <!--This will be the top menu bar-->
 <div class="top-menu-bar">
-    <div class="top-inner-menu-bar">
-        
+    <div class="top-inner-menu-bar" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <div>
+            <a href="{{ url_for('main_page') }}" style="text-decoration: none; font-weight: bold; font-size: 20px; color: white; font-family: Arial, sans-serif;">
+                CalorieTracker
+            </a>
+        </div>
+        <div>
+            <a href="{{ url_for('login') }}" style="margin-right: 15px; color: white; text-decoration: none; font-family: Arial, sans-serif;">Login</a>
+            <a href="{{ url_for('login') }}" style="color: white; text-decoration: none; font-family: Arial, sans-serif;">Sign Up</a>
+        </div>
     </div>
 </div>
 
