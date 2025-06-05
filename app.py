@@ -1,40 +1,28 @@
-#import flask and create instance of flask object
-from flask import Flask, render_template, url_for, redirect, request, abort
-from flask_sqlalchemy import SQLAlchemy
-from datetime import datetime
-
+# This is a simple Flask application that handles user login.
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
-#This tells our app where the database is located
-app.config['SQLALCHEMY_DATABASE_URI'] ='sqlite:///test.db'
-#starts the databse
-db = SQLAlchemy(app)
 
-class user(db.Model):
-    user_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    email = db.Column(db.String(20), nullable = False)
-    password_hash = db.Column(db.Integer, default=0)
-    data_created = db.Column(db.DateTime, default=datetime.now)
-    last_login = db.Column(db.DateTime, default=datetime.now)
+# Dummy user data
+users = {"test@test.com": "password123"}
 
-#function that returns content
-@app.route("/") #decorator to map URL route / to function
-def index():
-    return render_template('index.html')
-
-@app.route('/login',methods = ['POST', 'GET'])
+@app.route('/', methods=['GET', 'POST'])
+#Login route that handles both GET and POST requests
 def login():
+    error = None
     if request.method == 'POST':
-        if request.form['username'] == 'admin':
-            return redirect(url_for('success'))
+        username = request.form['username']
+        password = request.form['password_input']
+        if username in users and users[username] == password:
+            return redirect(url_for('main_page'))
         else:
-            abort(401)
-    else:
-        return redirect(url_for('index'))
-    
-@app.route('/success')
-def success():
-    return 'logged in successfully'
+            error = "Invalid email or password. Please try again."
+    return render_template('index.html', error=error)
 
-if __name__ == "__main__":
+# Route for the main page after successful login
+@app.route('/main')
+def main_page():
+    return render_template('main.html')
+
+if __name__ == '__main__':
     app.run(debug=True)
