@@ -10,10 +10,14 @@ users = {"test@test.com": "password123"}
 #Login route that handles both GET and POST requests
 def login():
     error = None
+    login_success = False
+    # If the request method is POST, check the credentials
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password_input']
         if username in users and users[username] == password:
+            login_success = True
+            # Redirect to the main page if login is successful
             return redirect(url_for('main_page'))
         else:
             error = "Invalid email or password. Please try again."

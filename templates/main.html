@@ -1,15 +1,35 @@
 {% extends "base.html" %}
 
 {% block head %}
-    <title>Main Dashboard</title>
+{% endblock %}
+
+{% block topbar %}
+<div class="top-menu-bar">
+    <div class="top-inner-menu-bar" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <div>
+            <a href="{{ url_for('main_page') }}" style="text-decoration: none; font-weight: bold; font-size: 20px; color: white; font-family: Arial, sans-serif;">
+                CalorieTracker
+            </a>
+        </div>
+        <div class="dropdown" style="position: relative;">
+            <button style="background-color: transparent; border: none; color: white; font-family: Arial, sans-serif;">Menu ▾</button>
+            <div style="position: absolute; background-color: white; display: none; flex-direction: column; right: 0; top: 100%; box-shadow: 0 8px 16px rgba(0,0,0,0.2); min-width: 120px;" class="dropdown-content">
+                <a href="#" style="padding: 10px; text-decoration: none; color: black; font-family: Arial, sans-serif;">Profile</a>
+                <a href="#" style="padding: 10px; text-decoration: none; color: black; font-family: Arial, sans-serif;">Settings</a>
+                <a href="{{ url_for('login') }}" style="padding: 10px; text-decoration: none; color: black; font-family: Arial, sans-serif;">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const dropdown = document.querySelector(".dropdown");
+    const menu = dropdown.querySelector(".dropdown-content");
+    dropdown.addEventListener("mouseenter", () => menu.style.display = "flex");
+    dropdown.addEventListener("mouseleave", () => menu.style.display = "none");
+</script>
 {% endblock %}
 
 {% block body %}
-<div class="top-menu-bar">
-    <div class="top-inner-menu-bar">
-        <a href="{{ url_for('login') }}">Logout</a>
-    </div>
-</div>
 
 <div class="center-content">
     <h1>Welcome to your Calorie Counter</h1>

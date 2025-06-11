@@ -7,7 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Test</title>
+        <title>CalorieTracker</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
@@ -15,10 +15,30 @@
         {%  block head  %} {%  endblock  %}
     </head>
     <body>
+        
+
+        {% block topbar%}
+        <!--This will be the top menu bar-->
+        <div class="top-menu-bar">
+            <div class="top-inner-menu-bar" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <div>
+                    <a href="{{ url_for('main_page') }}" style="text-decoration: none; font-weight: bold; font-size: 20px; color: white; font-family: Arial, sans-serif;">
+                        CalorieTracker
+                    </a>
+                </div>
+                <div>
+                    <a href="{{ url_for('login') }}" style="margin-right: 15px; color: white; text-decoration: none; font-family: Arial, sans-serif;">Login</a>
+                    <a href="{{ url_for('login') }}" style="color: white; text-decoration: none; font-family: Arial, sans-serif;">Sign Up</a>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        {%  block body  %}{%  endblock  %}
+        {%  block body  %} {%  endblock  %}
+
         
         <script src="" async defer></script>
     </body>
