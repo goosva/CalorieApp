@@ -1,12 +1,60 @@
 # CalorieApp
-This project is meant to test ChatGPT coding capabilities. I will be attempting to create a MyFitnessPal Clone through ChatGPT prompts with minimal help.
 
-Project Conclusion:\n
-Testing ChatGPT as a Web Developer: A MyFitnessPal Clone Experiment
-AI has been evolving rapidly, with increasing discussion about large language models (LLMs) like ChatGPT potentially replacing software developers. Inspired by this conversation, I designed a project to test whether ChatGPT could create a basic website through natural language interaction alone. The goal was to see how far AI could go in building a MyFitnessPal-style web application, with minimal human coding input.
-I began by asking ChatGPT to create a login page that would authenticate users and redirect them to a home page. It succeeded in generating a working login form with basic redirection. This initial success gave me confidence that ChatGPT could handle simple, functional components.
-As I progressed, I attempted to add a search bar to the home page. Initially, the search bar worked as expected. However, after I requested the element to be centered, the search functionality broke. Further prompts to correct the issue led to increasingly inconsistent behavior and new bugs. Despite multiple iterations and attempts to refine the prompt, I had to revert to the original, working version.
-Next, I explored implementing basic login security. For testing purposes, I used hard-coded usernames and passwords. ChatGPT generated code that enforced authentication correctly, users could only proceed with matching credentials. I then tried to enhance this by preventing users from accessing restricted pages by clicking the browser's back button after logout. ChatGPT suggested solutions, but none worked as intended. After many attempts, this feature remained unresolved.
-After a week of working on this project, I concluded that while LLMs like ChatGPT can assist with coding, they currently cannot replace the expertise of a skilled developer. While the model is impressively fast and often helpful, building a full-featured website solely through conversation revealed its limitations. You must already understand the language and tools you're using in order to evaluate and correct the model’s output.
-In its current state, AI can significantly enhance developer productivity but not eliminate the need for technical knowledge. Relying on LLMs without understanding the code risks introducing bugs and security vulnerabilities. Rather than replacing developers, AI is a powerful tool that can empower them to work more efficiently, provided they understand how to use it properly.
+This project is meant to test ChatGPT's coding capabilities. I attempted to create a MyFitnessPal clone entirely through ChatGPT prompts with minimal manual intervention.
 
+---
+
+## 🧪 Project Goal
+
+To evaluate how effectively ChatGPT can generate a functioning website by building a basic calorie tracker (MyFitnessPal clone) through natural language instructions—without writing the code myself.
+
+---
+
+## ✅ Features Attempted
+
+- [x] Login page with basic authentication
+- [x] Home page redirection after login
+- [x] Search bar on the home page
+- [x] Hardcoded username/password verification
+- [ ] Prevent access to restricted pages after logout (via browser back button)
+
+---
+
+## 📌 Project Conclusion
+
+### *Testing ChatGPT as a Web Developer: A MyFitnessPal Clone Experiment*
+
+AI is evolving rapidly, with increasing discussion around large language models (LLMs) like ChatGPT potentially replacing software developers. Inspired by this, I designed a project to test whether ChatGPT could build a basic web application solely through conversation.
+
+The goal was to replicate core features of MyFitnessPal using only ChatGPT’s responses to natural language prompts.
+
+#### 🧩 What Worked:
+- ChatGPT successfully created a working login page that redirected to a home page.
+- The initial search bar was functional.
+- Authentication using hardcoded credentials worked as expected.
+
+#### 🐞 What Didn't:
+- When I asked ChatGPT to center the search bar, it broke the search functionality entirely.
+- Attempts to fix the issue through additional prompts led to more bugs, not solutions.
+- Efforts to prevent users from accessing restricted pages after logout (e.g., via the browser's back button) were unsuccessful, despite multiple iterations.
+
+---
+
+## 🤖 Final Thoughts
+
+After a week of experimenting, I concluded:
+
+- ChatGPT is fast and often helpful for generating basic components.
+- However, building and maintaining a fully functional site requires technical knowledge.
+- LLMs do not yet replace skilled developers but can **amplify productivity** for those with coding experience.
+- Blindly relying on AI-generated code without understanding it introduces potential bugs and security risks.
+
+**Conclusion:** ChatGPT is a powerful *coding assistant*, not a replacement for software engineers—at least for now.
+
+---
+
+## 💡 Future Improvements
+
+- Implement proper session handling and logout protections
+- Connect to a real database for user credentials and food tracking
+- Add calorie counting and progress tracking features
