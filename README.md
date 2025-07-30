@@ -1,7 +1,7 @@
 # CalorieApp
 This project is meant to test ChatGPT coding capabilities. I will be attempting to create a MyFitnessPal Clone through ChatGPT prompts with minimal help.
 
-Project Conclusion:
+Project Conclusion:\n
 Testing ChatGPT as a Web Developer: A MyFitnessPal Clone Experiment
 AI has been evolving rapidly, with increasing discussion about large language models (LLMs) like ChatGPT potentially replacing software developers. Inspired by this conversation, I designed a project to test whether ChatGPT could create a basic website through natural language interaction alone. The goal was to see how far AI could go in building a MyFitnessPal-style web application, with minimal human coding input.
 I began by asking ChatGPT to create a login page that would authenticate users and redirect them to a home page. It succeeded in generating a working login form with basic redirection. This initial success gave me confidence that ChatGPT could handle simple, functional components.
